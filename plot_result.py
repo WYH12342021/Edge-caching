@@ -15,11 +15,11 @@ def plot_result(filepath, name, type):
     x = np.arange(len(data[0]))
     for i in range(len(data)):
         if i == 0:
-            plt.plot(x, data[i], label=f'PPO', linewidth=1.5, color='red')
+            plt.plot(x, data[i], linewidth=1.5, color='red')
         elif i == 1:
-            plt.plot(x, data[i], label=f'LFU', linewidth=1.5, color='blue')
+            plt.plot(x, data[i], linewidth=1.5, color='blue')
         else:
-            plt.plot(x, data[i], label=f'LRU', linewidth=1.5, color='green')
+            plt.plot(x, data[i], linewidth=1.5, color='green')
     plt.xlabel('episodes', fontsize=11)
     plt.ylabel(type, fontsize=11)
     plt.yticks(size=12)
